@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+  color: #00ff00;
+  background-color: black;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  /* background-color: dimgray; */
+}
+
+h1 {
+  padding: 2rem 0;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 75%;
+}
+
+#timer {
+  font-size: large;
+}
+
+#textArea {
+  /* border: 1px solid red; */
+  padding: 1rem 0;
+  font-size: xx-large;
+  /* letter-spacing: 0.1rem; */
+  /* line-height: 3rem; */
+  display: flex;
+  flex-direction: row;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+#typed-value {
+  /* height: 3rem; */
+  padding: 0.5rem;
+  font-size: xx-large;
+}
+
+#typed-value:focus {
+  outline: none;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+img {
+  background: none;
+  width: 2rem;
+}
+/* button {
+  background-color: dimgray;
+} */
+
+button:hover {
+  background-color: gray;
+}
+
+.error {
+  background-color: red;
+}
+
+.current {
+  margin-bottom: 2px;
+  border-bottom: 2px solid lime;
+}
+
+.hide {
+  visibility: hidden;
+}
