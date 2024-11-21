@@ -16,11 +16,13 @@ async function generate() {
   try {
     textArea.textContent = "Loading . . .";
     let response = await fetch(
-      "https://cors-anywhere.herokuapp.com/https://random-word-api.herokuapp.com/word?number=20"
+      "https://random-word-api.vercel.app/api?words=20"
     );
+    // let data = await response.json();
+    // wordArr = data.map((item) => item.word);
     wordArr = await response.json();
     displayWords();
-    console.log(wordArr.join(" "));
+    // console.log(wordArr.join(" "));
   } catch (error) {
     console.error("Error Fetching word", error);
   }
@@ -69,7 +71,7 @@ input.addEventListener("keyup", (event) => {
   }
 
   if (event.key === " ") {
-    console.log(input.value);
+    // console.log(input.value);
     if (input.value.length > 1) {
       if (input.value.trim() !== document.getElementById(count).textContent) {
         document.getElementById(count).style.color = "red";
@@ -217,7 +219,7 @@ function showResult() {
   accuracy = document.createElement("h2");
   result.appendChild(accuracy);
   accuracy.textContent = `accuracy: ${accuracyPercent}%`;
-  console.log("total characters:" + totalChar + "and typeChar: " + charCount);
+  // console.log("total characters:" + totalChar + "and typeChar: " + charCount);
 
   document.getElementById("typed-value").disabled = true;
 }
