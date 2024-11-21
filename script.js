@@ -16,7 +16,7 @@ async function generate() {
   try {
     textArea.textContent = "Loading . . .";
     let response = await fetch(
-      "https://random-word-api.herokuapp.com/word?number=20"
+      "https://cors-anywhere.herokuapp.com/https://random-word-api.herokuapp.com/word?number=20"
     );
     wordArr = await response.json();
     displayWords();
